@@ -122,8 +122,8 @@ EOF
             cd ~ || exit 1
             rm -rf myapp flutter 2>/dev/null
 
-            mkdir -p vps123
-            cd vps123
+            mkdir -p ryzen
+            cd ryzen
 
             if [ ! -d ".idx" ]; then
                 progress "Creating IDX development environment..."
@@ -170,12 +170,12 @@ EOF
 EOF
 
                 success "IDX Tool Setup Complete!"
-                echo -e "\n${GLOW}${BOLD}Location:${RESET} ${WHITE}~/vps123/.idx${RESET}"
+                echo -e "\n${GLOW}${BOLD}Location:${RESET} ${WHITE}~/ryzen/.idx${RESET}"
                 echo -e "${GLOW}${BOLD}Channel:${RESET}  ${WHITE}Nix Stable 24.05${RESET}"
                 echo -e "${GLOW}${BOLD}Tools:${RESET}    ${WHITE}Flutter, Dart, QEMU, Git, SSH${RESET}\n"
             else
                 warning "IDX environment already exists!"
-                echo -e "   Path: ${WHITE}~/vps123/.idx${RESET}\n"
+                echo -e "   Path: ${WHITE}~/ryzen/.idx${RESET}\n"
             fi
 
             echo -e "${NEON_BLUE}══════════════════════════════════════════════════════════${RESET}"
